@@ -1,0 +1,78 @@
+.rainbow {
+    background: linear-gradient(
+            rgba(255, 0, 0, 1) 0%,
+            rgba(255, 154, 0, 1) 10%,
+            rgba(208, 222, 33, 1) 20%,
+            rgba(79, 220, 74, 1) 30%,
+            rgba(63, 218, 216, 1) 40%,
+            rgba(47, 201, 226, 1) 50%,
+            rgba(28, 127, 238, 1) 60%,
+            rgba(95, 21, 242, 1) 70%,
+            rgba(186, 12, 248, 1) 80%,
+            rgba(251, 7, 217, 1) 90%,
+            rgba(255, 0, 0, 1) 100%
+        )
+        0 0/100% 200%;
+    animation: rainbowAnim 2s linear infinite;
+}
+
+@keyframes rainbowAnim {
+    to {
+        background-position: 0 -200%;
+    }
+}
+
+@keyframes rotate {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+/* Apply the animation to an element */
+.giradora {
+    animation: rotate 2s linear infinite;
+}
+
+@keyframes rainbow-text {
+    0% {
+        color: #ff0000;
+    }
+    16% {
+        color: #ff8000;
+    }
+    33% {
+        color: #ffff00;
+    }
+    50% {
+        color: #80ff00;
+    }
+    66% {
+        color: #00ff80;
+    }
+    83% {
+        color: #0080ff;
+    }
+    100% {
+        color: #8000ff;
+    }
+}
+
+.rainbow-text {
+    background-image: linear-gradient(
+        to right,
+        #ff0000,
+        #ff8000,
+        #ffff00,
+        #80ff00,
+        #00ff80,
+        #0080ff,
+        #8000ff
+    );
+    background-size: 200% auto;
+    color: transparent;
+    background-clip: text;
+    animation: rainbow-text 2s linear infinite;
+}
